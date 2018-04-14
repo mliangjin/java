@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+
+<title>register</title>
+<link
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../../assets/css/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
+<link href="signin.css" rel="stylesheet">
+<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+<style type="text/css">
+.container {
+	width: 420px;
+	padding-top: 30px;
+}
+.InputText {
+	font-weight: 700;
+	padding-right: 10px;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<form action="/10RR/register" method="post">
+			<div class="form-group">
+				<label for="exampleInputName">用户名</label> 
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="Username" name="username">
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputPassword1">密码</label> 
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">邮箱</label> 
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputName">姓名</label> 
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="name" name="name">
+			</div>
+			<div class="form-group">
+				<label class="InputText">性别</label>  
+				<label class="radio-inline">
+  					<input type="radio" name="sex" id="inlineRadio1" value="1"> 男 </label>
+				<label class="radio-inline">
+  					<input type="radio" name="sex" id="inlineRadio2" value="0"> 女 </label>
+			</div>
+			<div class="form-group">
+				<label class="InputText">爱好</label> 
+				<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="java" name="hobby"> java</label> 
+				<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" value="吃饭" name="hobby"> 吃饭</label> 
+				<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" value="睡觉" name="hobby"> 睡觉</label>
+			</div>
+			<div class="form-group">
+				<label class="InputText">生日</label>
+				 <input type="date" name="date" />
+			</div>
+			<button type="submit" class="btn btn-default">注册</button>
+		</form>
+	</div>
+
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
