@@ -1,0 +1,27 @@
+01
+字符串:多个字符组成的一串字符，可以看出一组字符组
+ 	API
+ 		字符串是常量: 他们的值创建之后不能更改，字符串缓冲区支持可变字符串。
+ 		因为	String 对象是不可变的，所以可以共享，例如
+ 			String str = "abc";
+ 		等效于
+ 			char date[] = ['a','b','c']
+ 			String str = new String(date)
+ 	构造方法
+ 		public String()										空构造
+ 		public String(byte[] bytes)							把字节数组转字符串
+ 		public String(byte[] bytes,int offset,int length)	把字节数组的一部分转字符串，索引，长度
+ 		public String(char[] value)							把字符数组转字符串
+ 		public String(char[] value,int offset,int count)	把字符数组的一部分转字符串，索引，长度
+ 		public String(String original)						把字符串常量转字符串
+
+ 02
+ 	字符串的特点:一旦被赋值，就不能被改变
+	
+	String s = new String("hello")	String s = "hello"
+	== :	比较引用类型，比较的是地址值是否相同
+	equals:	比较引用类型，默认也是比较地址值，但是，String类重写了equals()方法，比较的是内容是否相同
+	
+	字符串如果是变量相加，先开空间，再拼接
+	字符串如果是常量相加，先相加，再在常量池找，如果有就直接返回
+ 
