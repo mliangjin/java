@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd ">
+	
+	<!-- 指定扫描这个包下所有类的注解 -->
+	<context:component-scan base-package="com.m.bean"></context:component-scan>
+
+
+
+	<!-- <beans:bean name="user" class="com.m.bean.User" init-method="init" destroy-method="destroy">
+		<beans:property name="name" value="tom"></beans:property>
+		<beans:property name="age" value="18"></beans:property>
+		<beans:property name="car" ref="car"></beans:property>
+	</beans:bean>
+	
+	<beans:bean name="car" class="com.m.a_hello.TestObjectCar">
+		<beans:property name="name" value="奥迪"></beans:property>
+		<beans:property name="color" value="黑色"></beans:property>
+	</beans:bean> -->
+	
+</beans:beans>

@@ -17,7 +17,11 @@ public class Demo {
 		// 3 打印user对象
 		System.out.println(u);
 		// 4 打印配置文件中注入的参数
-		System.out.println(u.getName());
-		System.out.println(u.getAge());
+		System.out.println("配置文件中的name属性："+u.getName());
+		System.out.println("配置文件中的age属性："+u.getAge());
+		
+		// 5 复杂对象
+		ComplexObjectInject complex = (ComplexObjectInject) ac.getBean("complex");
+		System.out.println(complex);
 	}
 }

@@ -1,8 +1,17 @@
 package com.m.bean;
 
+import com.m.a_hello.TestObjectCar;
+
 public class User {
 	private String name;
 	private int age;
+	private TestObjectCar car;
+	public TestObjectCar getCar() {
+		return car;
+	}
+	public void setCar(TestObjectCar car) {
+		this.car = car;
+	}
 	public String getName() {
 		return name;
 	}
@@ -20,5 +29,9 @@ public class User {
 	}
 	public void destroy() {
 		System.out.println("销毁方法");
+	}
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + ", car=" + car.name + car.color + "]";
 	}
 }
