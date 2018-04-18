@@ -2,6 +2,7 @@ package com.m.a_springaop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 
+// 通知类
 public class MyAdvice {
 	// 前置通知
 	// 		在目标方法前调用
