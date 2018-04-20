@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd ">
 	
 	<!-- 准备工作导入aop(约束)命名空间 -->
 	<!-- 1.配置目标对象 -->
-	 <bean name="userService" class="com.m.service.UserServiceImpl"></bean>
+	 <beans:bean name="userService" class="com.m.service.UserServiceImpl"></beans:bean>
 	<!-- 2.配置通知类对象 -->
-	 <bean name="myAdvice" class="com.m.a_springaop.MyAdvice"></bean>
+	 <beans:bean name="myAdvice" class="com.m.a_springaop.MyAdvice"></beans:bean>
 	<!-- 3.配置将通知织入目标对象 -->
 	<aop:config>
 		<!-- 
@@ -42,4 +36,4 @@
 			<aop:after method="after" pointcut-ref="pc"/>
 		</aop:aspect>
 	</aop:config>
-</beans>
+</beans:beans>
