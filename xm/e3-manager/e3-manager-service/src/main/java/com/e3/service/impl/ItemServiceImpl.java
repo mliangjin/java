@@ -1,5 +1,7 @@
 package com.e3.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,9 +33,16 @@ public class ItemServiceImpl implements ItemService {
 		// 根据条件查询
 		TbItemExample example = new TbItemExample();
 		Criteria criteria =	example.createCriteria();
+		// 查询条件
+		criteria.andIdEqualTo(itemId);
+		// 执行查询
+		List<TbItem> list = itemMapper.selectByExample(example);
 		
-		
-		return null;
+		if (list != null && list.size() > 0) {
+			return list.get(0);
+		}else {
+			return null;
+		}
 	}
 
 }
