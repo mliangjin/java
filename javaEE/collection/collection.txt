@@ -1,0 +1,6 @@
+java 集合可分为两种 Collection 和 Map
+	Collection 接口
+		Set	:元素无序，不可重复的集合
+		List:元素有序，可重复的集合
+	Map 接口
+		具有映射关系 "key-value对" 的集合
