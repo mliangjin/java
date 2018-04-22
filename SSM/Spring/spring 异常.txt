@@ -1,4 +1,0 @@
-spring 异常
-	com.sun.proxy.$Proxy6 cannot be cast to
-		在获得bean中配置的时候，前面强制转为接口
-		UserService us = (UserService)ac.getBean("userServiceImpl") // UserService是接口 UserServiceImpl是实现类
