@@ -1,0 +1,41 @@
+创建过程
+    1.mabatisConfig.xml 
+        MyBatis核心配置文件，在 SqlSessionFactoryBuilder 中导入的 InputStream 就是它
+    2.SqlsessionFactoryUtils 
+        工具类 用于创建 SqlSession 它是 MyBatis 核心接口对象
+            SqlSessionFactoryBuilder 中引入配置创建出 SqlSessionFactory对象
+            SqlSessionFactory.openSession 返回的就是 SqlSession
+            其中线程同步 synchronized (LOCK)
+    3.创建 POJO
+        对应数据库表里面数据的名字
+    4.创建 Mapper
+        这是一个接口，由 MyBatis 做映射
+    5.创建 Mapper.xml
+        这是映射使用的SQL语句文件，在这个文件中执行SQL
+    6.编写 Main
+        主入口类，编写逻辑语句
+        使用 org.apache.log4j.Logger 包下面的 Logger Console 输出记录
+        使用工具类  SqlSessionFactoryBuilder 获得 SqlSession
+        使用 SqlSession.getMapper(传入 Mapper 映射接口类的class文件)
+        使用 POJO 接收 Mapper接口方法调用后的返回值
+        log 输出需要的 POJO 中获得值的方法
+        关闭 SqlSession
+        
+        
+ 
+ 
+ 
+ SqlSessionFactoryBuilder
+    构造器，它会根据配置或代码生成，SqlSeesionFactory，采用的是分布构建的Builder模式
+SqlSessionFactory
+    工厂接口，依靠它来生成SqlSession，使用的是工厂模式
+SqlSession
+    会话，一个可以发送SQL执行返回结果，也可以获取Mapper的接口。
+    一般使用的是 MyBatis 提供的 SQL Mapper 接口编程技术
+SQL Mapper
+    映射器，MyBatis新设计存在的组件，它由java或者XML文件或者注解构成，需要给出对象的SQL和映射规则。
+    它负责发送SQL去执行并返回结果
+
+每个基于 MyBatis 的引用都是以一个 SqlSessionFactory 的实例为中心的
+而 SqlSessionFactory 唯一的作用就是生产 MyBatis 的核心接口对象 SqlSession
+  
