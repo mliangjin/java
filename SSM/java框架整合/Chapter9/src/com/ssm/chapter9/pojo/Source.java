@@ -1,10 +1,9 @@
-package com.ssm.chapter9;
+package com.ssm.chapter9.pojo;
 
-public class JuiceSource {
-	private String fruit;  // 类型
-	private String sugar;  // 糖分描述
-	private String size;   // 大小杯
-	
+public class Source {
+	private String fruit;// 类型
+	private String sugar;// 糖分描述
+	private String size;// 大小杯
 	public String getFruit() {
 		return fruit;
 	}
@@ -23,4 +22,5 @@ public class JuiceSource {
 	public void setSize(String size) {
 		this.size = size;
 	}
+	
 }
