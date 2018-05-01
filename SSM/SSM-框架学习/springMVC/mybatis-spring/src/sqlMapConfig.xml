@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+<configuration>
+	<!-- 指定别名 扫描包 -->
+	<typeAliases>
+		<package name="com.ssm.mybatis.pojo"/>
+	</typeAliases>
+	
+	<!-- 指定映射接口文件 扫描包 -->
+	<mappers>
+		<package name="com.ssm.mybatis.mapper"/>
+	</mappers>
+</configuration>

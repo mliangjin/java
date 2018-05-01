@@ -2,5 +2,38 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/ant-1.9.6.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/ant-launcher-1.9.6.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/asm-5.0.4.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/aspectjweaver-1.6.11.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/cglib-3.2.2.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/junit-4.9.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/log4j-api-2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/log4j-core-2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/mybatis-3.4.1.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/ognl-3.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/pool-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/slf4j-log4j12-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-aop-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-aspects-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-beans-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-context-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-core-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-expression-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-jdbc-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-jms-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-messaging-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-tx-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-web-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/spring-webmvc-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/m/java/SSM/SSM-Tools/SSM包/mybatis-spring-1.3.1.jar" sourcepath="/Users/m/java/SSM/SSM-Tools/SSM包/mybatis-spring-1.3.1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

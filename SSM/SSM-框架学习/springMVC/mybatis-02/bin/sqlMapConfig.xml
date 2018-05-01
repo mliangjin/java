@@ -5,9 +5,6 @@
  
 <configuration>
 
-	<typeAliases>
-		<package name="com.ssm.mybatis.pojo"/>
-	</typeAliases>
 	<!-- 和 Spring 整合后会删除这个配置 -->
 	<environments default="development">
 		<environment id="development">
