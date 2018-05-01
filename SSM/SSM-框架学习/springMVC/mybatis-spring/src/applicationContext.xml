@@ -16,10 +16,10 @@
 
 	<!-- 数据库连接池 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="${db.driver}"></property>
-		<property name="url" value="${db.url}"></property>
-		<property name="username" value="${db.username}"></property>
-		<property name="password" value="${db.password}"></property>
+		<property name="driverClassName" value="${jdbc.driver}"></property>
+		<property name="url" value="${jdbc.url}"></property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
 		<property name="maxActive" value="10"></property>
 		<property name="maxIdle" value="5"></property>	
 	</bean>
@@ -39,6 +39,27 @@
 		如此创造 sqlSessionFactory 工厂
 	 -->
 	 
+	 <!-- MyBatis Mapper 动态代理 
+	 <bean name="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	 	<property name="sqlSessionFactory" ref="sqlSessionFactoryBean"></property>
+	 	需要 com.ssm.mybatis.mapper.UserMapper 指定具体接口
+	 	下面有增强版
+	 	<property name="mapperInterface" value="com.ssm.mybatis.mapper.UserMapper"></property>
+	 </bean>
 	 
+	 	如上相当于:
+	 	SqlSession sqlSession = sqlSessionFactory.openSession();
+	 	给予 Mapper sqlSession
+	 	然后 UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+	  -->
+	  
+	  <!-- 动态代理 增强版 扫描 -->
+	  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	  	<!-- 
+	  	不需要注入 SqlSessionFactory 工厂 
+	  	只需要注入基本包,会自动扫描子包 
+	  	-->
+	  	<property name="basePackage" value="com.ssm.mybatis.mapper"></property>
+	  </bean>
 
 </beans>
