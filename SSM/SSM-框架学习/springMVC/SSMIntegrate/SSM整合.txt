@@ -1,0 +1,101 @@
+1
+导入jar包
+
+2
+配置文件
+	2.1
+	SqlMapConfig.xml
+		配置别名	
+			<?xml version="1.0" encoding="UTF-8"?>
+			<!DOCTYPE configuration
+			 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+			 "http://mybatis.org/dtd/mybatis-3-config.dtd">
+			 <configuration>
+			 	<typeAliases>
+			 		<package name="con.ssm.mybatis.pojo"/>
+			 	</typeAliases>
+			 </configuration>
+		 
+	2.2
+	applicationContext-dao.xml
+		- db.properties
+			jdbc.driver=com.mysql.jdbc.Driver
+			jdbc.url=jdbc:mysql://localhost:3306/SSM-01?characterEncoding=utf-8
+			jdbc.username=root
+			jdbc.password=123
+		配置数据库连接池
+		配置sqlSessionFactory 工厂
+		配置mapper接口扫描包
+			<context:property-placeholder location="classpath:db.properties"/>
+			<bean id="dateSource" class="com.alibaba.druid.pool.DruidDataSource">
+				<property name="driverClassName" value="${jdbc.driver}"></property>
+				<property name="url" value="${jdbc.url}"></property>
+				<property name="username" value="${jdbc.username}"></property>
+				<property name="password" value="${jdbc.password}"></property>	
+			</bean>
+			
+			<bean class="org.mybatis.spring.SqlSessionFactoryBean">
+				<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+				<property name="dataSource" ref="dateSource"></property>
+			</bean>
+			<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+				<property name="basePackage" value="com.ssm.mybatis.mapper"></property>
+			</bean>
+			
+	2.3
+	applicationContext-service.xml
+		配置service层
+			<?xml version="1.0" encoding="UTF-8"?>
+			<beans xmlns="http://www.springframework.org/schema/beans"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xmlns:aop="http://www.springframework.org/schema/aop"
+				xmlns:context="http://www.springframework.org/schema/context"
+				xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+					http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+			
+				<context:component-scan base-package="com.ssm.springmvc.service"></context:component-scan>
+			
+			</beans>
+		
+		
+	2.4
+	sqlMapConfig.xml
+		配置扫描pojo包
+		配置三大主键
+			<?xml version="1.0" encoding="UTF-8"?>
+			<beans xmlns="http://www.springframework.org/schema/beans"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xmlns:context="http://www.springframework.org/schema/context"
+				xmlns:mvc="http://www.springframework.org/schema/mvc"
+				xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+					http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+				
+				<context:component-scan base-package="com.ssm.springmvc.controller"></context:component-scan>
+				
+				<mvc:annotation-driven></mvc:annotation-driven>
+				
+				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<property name="prefix" value="/WEB-INF/jsp"></property>
+					<property name="suffix" value=".jsp"></property>
+				</bean>
+			
+			</beans>
+			
+	2.5
+	log4j.properties
+		配置日志
+			log4j.rootLogger=DEBUG , stdout
+			log4j.logger.org.mybatis=DEBUG
+			log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+			log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+			log4j.appender.stdout.layout.ConversionPattern=%5p %d %C: %m%n
+	2.6
+	web.xml
+		配置spring
+		配置监听器加载spring
+		配置过滤器，解决POST乱码问题
+
+			
+		
